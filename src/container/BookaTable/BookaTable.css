@@ -1,0 +1,122 @@
+.app__bookTable {
+    background: var(--color-black);
+    color: white;
+    flex-direction: column;
+    margin-bottom: 6rem;
+}
+
+.app__bookTable h1 {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.app__bookTable form {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+
+.input__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.input__item input {
+    flex-basis: 48%;
+    /* width: 380px; */
+    width: 100%;
+    border: 1px solid var(--color-golden);
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-family: var(--font-alt);
+    outline: none;
+    color: var(--color-white);
+    padding: .75rem 1rem;
+    background: var(--color-black);
+}
+
+.input__item input::placeholder {
+    color: var(--color-golden);
+    font-family: var(--font-base);
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(98%) sepia(62%) saturate(1000%) hue-rotate(325deg) brightness(98%) contrast(76%);
+    cursor: pointer;
+}
+
+
+
+
+
+
+.input__item input[type='date'],
+.input__item input[type='time'] {
+    font-size: 1.1rem;
+}
+
+.reservation__type,
+.special__note {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.reservation__type label,
+.special__note label {
+    font-size: 1.1rem;
+    font-family: var(--font-base);
+    color: var(--color-golden);
+    margin-bottom: .5rem;
+}
+
+.reservation__type select,
+.special__note textarea {
+    width: 100%;
+    border: 1px solid var(--color-golden);
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-family: var(--font-base);
+    outline: none;
+    color: var(--color-white);
+    padding: .75rem 1rem;
+    background: var(--color-black);
+}
+
+.special__note textarea {
+    resize: none;
+    height: 150px;
+}
+
+.special__note textarea::-webkit-scrollbar {
+    width: 3px;
+}
+
+@media screen and (max-width:750px) {
+    .app__bookTable form {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .app__bookTable form {
+        row-gap: 1rem;
+    }
+
+    .input__item {
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+
+    .input__item input[type='date'],
+    .input__item input[type='time'] {
+        font-size: .9rem;
+    }
+}
